@@ -1,6 +1,7 @@
 .vscode
 .idea
 server/target
+server/bin
 .settings
 .classpath
 .project
