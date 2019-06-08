@@ -8,7 +8,7 @@ os:
 
 script:
   - cd server
-  - mvn build
+  - mvn package
 
 branches:
   only:
