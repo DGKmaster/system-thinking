@@ -1,0 +1,20 @@
+language: java
+
+jdk:
+ - openjdk12
+
+os:
+  - linux
+
+script:
+  - cd server
+  - mvn build
+
+branches:
+  only:
+    - master
+    - dgk
+    - qwe
+
+after_success:
+  - codecov
