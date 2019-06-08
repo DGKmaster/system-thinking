@@ -1,3 +1,6 @@
 .vscode
 .idea
 server/target
+.settings
+.classpath
+.project
