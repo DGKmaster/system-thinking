@@ -1,10 +1,10 @@
-# System-Thinking Team
+# System-Thinking Team Solution For Tourist App
 
 [![Build Status](https://travis-ci.org/DGKmaster/system-thinking.svg?branch=dgk)](https://travis-ci.org/DGKmaster/system-thinking)
 
 ## Описание
 
-Приложение и сервер по созданию туристических маршрутов. 
+Приложение и сервер по созданию туристических маршрутов.
 
 ---
 
@@ -24,7 +24,7 @@
 ### Пример запроса
 
 ```url
-http://localhost:9090/server?sort_by=SORT_BY_POPULARITY&page=1
+http://localhost:8080/server?sort_by=SORT_BY_POPULARITY&page=1
 ```
 
 ### Пример ответа
@@ -39,7 +39,7 @@ http://localhost:9090/server?sort_by=SORT_BY_POPULARITY&page=1
         "subobj": {
             "arr": ["foo", "ha"],
             "numero": 1
-            }
         }
     }
+}
 ```

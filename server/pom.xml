@@ -9,9 +9,8 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>server Maven Webapp</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <name>Server Maven Webapp</name>
+  <url>http://www.localhost.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

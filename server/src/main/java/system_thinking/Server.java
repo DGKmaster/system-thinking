@@ -10,7 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class Server {
     @RequestMapping(value="/", method = RequestMethod.GET)
     @ResponseBody
-    public String answer(@RequestParam(value = "answer", required = false) String response) {
-        return !StringUtils.isEmpty(response) ? response : "";
+    public String answer(
+        @RequestParam(value = "answer", required = false) String answer
+        ) {
+        return !StringUtils.isEmpty(answer) ? answer : "";
     }
 }
