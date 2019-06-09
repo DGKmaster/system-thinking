@@ -10,3 +10,7 @@
 ### Program binary output
 server/target
 server/bin
+
+
+### Android
+*.jar
