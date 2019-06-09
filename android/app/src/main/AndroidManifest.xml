@@ -21,6 +21,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--Developers should put application credentials here.To obtain them, please register the application
+         at https://developer.here.com/develop/mobile-sdks-->
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="em7ODpG2qFuSxC33EPAb" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="5fGkxNsBK5jPf-fafJ7NNw" />
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="Bvkfnhok9H7o+CvDzP1VCsL05/2k0U1KKOgXwALWi/GXtm2GOEM9019f+HXP/2aYWiEP9lrg4cRdBcVQ0ionP+UU2vrBRLmkmCXYtQOpeUf/8jmyv9SbUebHJHJn2i5FzXfFivA59Tsz9Vf7EQzooXzE6aHMT/04bcj9EPS0rpuaqjRAMs0CD0fcTiPzSVkc2J3SO9OtqNZPwcKX7+NPmYrzFcF5SYQUVZlCvO7pok0BawqrDecib2g0PZ4gUIaL0DBNVaxuvXoimkWC4jMXwDgNNopq421iuQxOAGMjbJ2IQwdFunb5syxv0Hs7w2jLRB3qrB6RXzkmBO2xsdDKd4YZWsIfi1fEzPq8dqFVGN8fLRglnAoB6ahTpUpMVAHJLoGBXJojc1utCPPXc+le4TZI68UjvydtlgBnqUdfA3WpKIXkhqHqTJshAdQUBp1nyU6eHy/2d+KQUChl79hPBSU35A2Hp5vFgrfbzOLvNBSR5zCfBmuEVIAF5gznHhqyQTicSwUXwlDk0KFhnqF7RD6JkfRciwjQMvTFJCkvphTF6NeLSa7M5cnot1Y3EXSSRYFF0H0y9eHzXy0jhH0cwmWPAuh2YPAcRfbB0mA+MvOF2wpuHwUx5zAf1GktUfoZ7zl8GCNCaco1JbHV1JuhiUFNJ10pF7ebBM/Q2DOjoCU="/>
+
+         <!--Developers should always provide custom values for each of {YOUR_LABEL_NAME} and {YOUR_INTENT_NAME}.
+         Do not reuse HERE SDK defaults.-->
+        <meta-data
+            android:name="INTENT_NAME"
+            android:value="DGKmaster" />
+        <service
+            android:name="com.here.android.mpa.service.MapService"
+            android:label="Dgekotna"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="DGKmaster"></action>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
