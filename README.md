@@ -1,17 +1,45 @@
-# system-thinking
+# System-Thinking Team Solution For Tourist App
 
-[![Build Status](https://travis-ci.org/DGKmaster/system-thinking.svg?branch=master)](https://travis-ci.org/DGKmaster/system-thinking)
+[![Build Status](https://travis-ci.org/DGKmaster/system-thinking.svg?branch=dgk)](https://travis-ci.org/DGKmaster/system-thinking)
+
+## Описание
 
 Приложение и сервер по созданию туристических маршрутов.
 
-## Пример ответа
+---
 
-```json
-{"string":"foo","number":5,"array":[1,2,3],"object":{"property":"value","subobj":{"arr":["foo","ha"],"numero":1}}}
-```
+## Технологический стек
 
-## Пример запроса
+1. Java 11
+1. Spring MVC
+1. Tomcat 9
+1. Docker 18.09
+1. PostgreSQL
+1. Travis CI
+
+---
+
+## Взаимодействие между приложением и сервером
+
+### Пример запроса
 
 ```url
-http://localhost:9090/server?sort_by=SORT_BY_POPULARITY&page=1
+http://localhost:8080/server?sort_by=SORT_BY_POPULARITY&page=1
+```
+
+### Пример ответа
+
+```json
+{
+    "string": "foo",
+    "number": 5,
+    "array": [1, 2, 3],
+    "object": {
+        "property": "value" ,
+        "subobj": {
+            "arr": ["foo", "ha"],
+            "numero": 1
+        }
+    }
+}
 ```
