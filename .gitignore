@@ -1,6 +1,16 @@
-.vscode
+### IDEA files
 .idea
-server/target
+
+### VS Code files
+.vscode
 .settings
 .classpath
 .project
+
+### Program binary output
+server/target
+server/bin
+
+
+### Android
+*.jar
