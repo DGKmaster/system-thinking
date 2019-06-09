@@ -15,6 +15,7 @@ branches:
     - master
     - dgk
     - qwe
+    - develop
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
