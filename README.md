@@ -91,3 +91,21 @@ http://localhost:8080/server/?time=60&money=1000&type=active&mycoordD=60.037&myc
     ]
 }
 ```
+
+---
+
+## Интерфейс приложения
+
+![alt text](docs/img/1.png "Главное окно") 
+![alt text](docs/img/2.png "Главное окно")
+![alt text](docs/img/3.png "Главное окно")
+![alt text](docs/img/4.png "Главное окно")
+![alt text](docs/img/5.png "Главное окно")
+![alt text](docs/img/6.png "Главное окно")
+![alt text](docs/img/7.png "Главное окно")
+![alt text](docs/img/8.png "Главное окно")
+![alt text](docs/img/9.png "Главное окно")
+![alt text](docs/img/10.png "Главное окно")
+![alt text](docs/img/11.png "Главное окно")
+![alt text](docs/img/12.png "Главное окно")
+![alt text](docs/img/22.png "Главное окно")
