@@ -7,7 +7,7 @@
     tools:context=".RouteCreateActivity">
 
     <TextView
-        android:id="@+id/textViewTime"
+        android:id="@+id/textViewPointsN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -28,7 +28,7 @@
         android:text="Деньги"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTime" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewPointsN" />
 
     <SeekBar
         android:id="@+id/seekBar"
@@ -40,7 +40,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewTime"
+        app:layout_constraintStart_toEndOf="@+id/textViewPointsN"
         app:layout_constraintTop_toTopOf="parent" />
 
     <SeekBar
@@ -151,6 +151,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="Предложить маршрут"
+        android:onClick="goToRoutesAct"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

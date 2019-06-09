@@ -21,30 +21,28 @@ public class NetworkUtil {
     private static final String BASE_URL = "http://192.168.43.132:9090/server";
 
 
-    private static final String PARAMS_LANGUAGE = "language";
-    private static final String PARAMS_SORT_BY = "sort_by";
-    private static final String PARAMS_PAGE = "answer";
+    private static final String PARAMS_TIME = "time";
+    private static final String PARAMS_MONEY = "money";
+
+    private static final String PARAMS_TYPE = "type";
+    private static final String PARAMS_COORD1 = "coordD";
+    private static final String PARAMS_COORD2 = "coordS";
+    private static final String PARAMS_SORT = "sortby";
+
+    //private static final String PARAMS_PAGE = "page";
 
 
-    private static final String LANGUAGE_VALUE = "ru-RU";
-    private static final String SORT_BY_POPULARITY = "popularity.desc";
-    private static final String SORT_BY_TOP_RATED = "vote_average.desc";
 
-    public static final int POPULARITY = 0;
-    public static final int TOP_RATED = 1;
-
-    private static URL buildURL(int sortBy, int page) {
+    private static URL buildURL(int time, int money, String type, double c1, double c2, String sort) {
         URL result = null;
-        String methodOfSort;
-        if (sortBy == POPULARITY) {
-            methodOfSort = SORT_BY_POPULARITY;
-        } else {
-            methodOfSort = SORT_BY_TOP_RATED;
-        }
+
         Uri uri = Uri.parse(BASE_URL).buildUpon()
-                //.appendQueryParameter(PARAMS_LANGUAGE, LANGUAGE_VALUE)
-                //.appendQueryParameter(PARAMS_SORT_BY, methodOfSort)
-                .appendQueryParameter(PARAMS_PAGE, "{\"string1\":\"Privet\"}")
+                .appendQueryParameter(PARAMS_TIME, Integer.toString(time))
+                .appendQueryParameter(PARAMS_MONEY, Integer.toString(money))
+                .appendQueryParameter(PARAMS_TYPE, type)
+                .appendQueryParameter(PARAMS_COORD1, Double.toString(c1))
+                .appendQueryParameter(PARAMS_COORD2, Double.toString(c2))
+                .appendQueryParameter(PARAMS_SORT, sort)
                 .build();
         try {
             result = new URL(uri.toString());
@@ -55,9 +53,9 @@ public class NetworkUtil {
         return result;
     }
 
-    public static JSONObject getJSONFromNetwork(int sortBy, int page) {
+    public static JSONObject getJSONFromNetwork(int time, int money, String type, double c1, double c2, String sort) {
         JSONObject result = null;
-        URL url = buildURL(sortBy, page);
+        URL url = buildURL(time, money, type, c1, c2, sort);
         try {
             result = new JSONLoadTask().execute(url).get();
         } catch (InterruptedException e) {

@@ -14,14 +14,14 @@ import org.json.JSONObject;
 public class MainActivity extends AppCompatActivity {
     private String cityName = null;
     Spinner spinnerC;
-    public TextView textViewTest;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         spinnerC = findViewById(R.id.spinnerCitys);
-        textViewTest = findViewById(R.id.textViewTest);
+
     }
 
     public void goToPlaces(View view) {
@@ -40,17 +40,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToRouteCreate(View view) {
-        // Intent intent = new Intent(this, RoutesActivity.class);
-        // JSONObject data = NetworkUtil.DownloadJSONObj.execute().get();
-        JSONObject jsonObject = NetworkUtil.getJSONFromNetwork(1, 1);
-        try {
-            String temp = jsonObject.getString("string1");
+        Intent intent = new Intent(this, RouteCreateActivity.class);
+        cityName = "Санкт-Петербург";
+        intent.putExtra("cityName", cityName);
+        startActivity(intent);
 
-            // int itmp=jsonObject.getInt("number5");
-            textViewTest.setText(temp);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
 
     }
 }
