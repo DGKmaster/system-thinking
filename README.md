@@ -49,18 +49,19 @@ http://localhost:8080/server/?time=60&money=1000&type=active&mycoordD=60.037&myc
 
 #### Параметры ответа
 
-* **title** - 
-* **placesNumber** - 
-* **description** - 
-* **time** - 
-* **rating** - 
-* **Array[] locations** - 
-  * **title** - 
-  * **coordD** - 
-  * **desctiption** - 
-  * **imgURL** - 
-  * **rating** - 
-  * **id_place** - 
+* **title** - Название маршрута
+* **placesNumber** - Количество достопримечательностей
+* **description** - Описание маршрута
+* **time** - Продолжительность маршрута
+* **rating** - Рейтинг маршрута
+* **Array[] locations** - Список достопримечательностей
+  * **title** - Название достопримечательности
+  * **coordD** - Местоположение достопримечательности (долгота)
+  * **coordS** - Местоположение достопримечательности (широта)
+  * **desctiption** - Описание достопримечательности
+  * **imgURL** - Фотография достопримечательности
+  * **rating** - Рейтинг достопримечательности
+  * **id_place** - Идентификационный номер достопримечательности
 
 #### Пример ответа
 
@@ -96,16 +97,98 @@ http://localhost:8080/server/?time=60&money=1000&type=active&mycoordD=60.037&myc
 
 ## Интерфейс приложения
 
-![alt text](docs/img/1.png "Главное окно") 
-![alt text](docs/img/2.png "Главное окно")
-![alt text](docs/img/3.png "Главное окно")
-![alt text](docs/img/4.png "Главное окно")
-![alt text](docs/img/5.png "Главное окно")
-![alt text](docs/img/6.png "Главное окно")
-![alt text](docs/img/7.png "Главное окно")
-![alt text](docs/img/8.png "Главное окно")
-![alt text](docs/img/9.png "Главное окно")
-![alt text](docs/img/10.png "Главное окно")
-![alt text](docs/img/11.png "Главное окно")
-![alt text](docs/img/12.png "Главное окно")
-![alt text](docs/img/22.png "Главное окно")
+### 1. Главное окно
+
+![alt text](docs/img/1.png "Главное окно")
+
+---
+
+### 2. Построение маршрута
+
+![alt text](docs/img/22.png "Построение маршрута")
+
+---
+
+### 3. Выбор маршрута
+
+![alt text](docs/img/3.png "Выбор маршрута")
+
+---
+
+### 4. Описание маршрута
+
+![alt text](docs/img/4.png "Описание маршрута")
+
+---
+
+### 5. Карта маршрута
+
+![alt text](docs/img/5.png "Карта маршрута")
+
+---
+
+### 6. Дополнительная информация по маршруту
+
+![alt text](docs/img/6.png "Дополнительная информация по маршруту")
+
+---
+
+### 7. Вывод цены маршрута
+
+![alt text](docs/img/7.png "Вывод цены маршрута")
+
+---
+
+### 8. Вывод продолжительности маршрута
+
+![alt text](docs/img/8.png "Вывод продолжительности маршрута")
+
+---
+
+### 9. Окно
+
+![alt text](docs/img/9.png "Окно")
+
+---
+
+### 10. Окно
+
+![alt text](docs/img/10.png "Окно")
+
+---
+
+### 11. Окно
+
+![alt text](docs/img/11.png "Окно")
+
+---
+
+### 12. Окно
+
+![alt text](docs/img/12.png "Окно")
+
+---
+
+### 13. Окно
+
+![alt text](docs/img/13.png "Окно")
+
+---
+
+### 14. Окно
+
+![alt text](docs/img/14.png "Окно")
+
+---
+
+### 15. Окно
+
+![alt text](docs/img/15.png "Окно")
+
+---
+
+### 16. Окно
+
+![alt text](docs/img/16.png "Окно")
+
+---
