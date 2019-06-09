@@ -8,7 +8,7 @@ os:
 
 script:
   - cd server
-  - mvn package
+  - mvn package dockerfile:build
 
 branches:
   only:

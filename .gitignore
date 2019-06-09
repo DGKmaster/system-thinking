@@ -11,6 +11,6 @@
 server/target
 server/bin
 
-
 ### Android
 *.jar
+*.aar
