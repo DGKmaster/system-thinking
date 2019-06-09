@@ -43,7 +43,7 @@ public class Locations {
     private void getFromDB() {
         try {
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery( "select * from user" );
+            ResultSet rs = statement.executeQuery( "select * from sights" );
 
             Location tempLocation;
 
@@ -55,7 +55,8 @@ public class Locations {
                         rs.getFloat( "lat" ),
                         rs.getString( "description" ),
                         rs.getString( "img"),
-                        rs.getFloat( "rating" )
+                        rs.getFloat( "rating" ),
+                        rs.getInt(  )
                 );
                 locationsList.add( tempLocation );
             }
@@ -64,7 +65,7 @@ public class Locations {
         }
     }
 
-    public String fetchJson(int geo_id) {
+    public String fetchLocationByID(int geo_id) {
         JsonObject location = new JsonObject();
         //StringBuilder locationJson = new StringBuilder( );
         for (Location tempLoc : this.locationsList) {
@@ -76,8 +77,18 @@ public class Locations {
                 location.addProperty("description", tempLoc.getDescription());
                 location.addProperty("img", tempLoc.getImg());
                 location.addProperty("rating", tempLoc.getRating());
+                location.addProperty("route", tempLoc.getRoute());
                 System.out.println(location.toString());
             }
+        }
+        String result = location.toString();
+        return result;
+    }
+
+    public String fetchJson(int time, int money, String type, float myCoordD, float myCoordS, String sortby, int page) {
+        JsonObject location = new JsonObject();
+        for (Location tempLoc : this.locationsList) {
+
         }
         String result = location.toString();
         return result;
