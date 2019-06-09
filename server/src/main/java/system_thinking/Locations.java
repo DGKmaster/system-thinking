@@ -49,10 +49,8 @@ public class Locations {
         try {
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery( "select * from sights" );
-            ResultSet rs2 = statement.executeQuery( "select * from routes" );
 
             Location tempLocation;
-            Route tempRoute;
 
             while (rs.next()) {
                 tempLocation = new Location(
@@ -69,17 +67,23 @@ public class Locations {
                 locationsList.add( tempLocation );
             }
 
+            Statement statement2 = connection.createStatement();
+            ResultSet rs2 = statement2.executeQuery( "select * from routes" );
+
+            Route tempRoute;
+
             while (rs2.next()) {
                 tempRoute = new Route(
-                        rs.getInt( "id_route" ),
-                        rs.getString( "title" ),
-                        rs.getInt( "placesnumber" ),
-                        rs.getString( "description" ),
-                        rs.getInt( "time" ),
-                        rs.getFloat( "rating" )
+                        rs2.getInt( "id_route" ),
+                        rs2.getString( "title" ),
+                        rs2.getInt( "placesnumber" ),
+                        rs2.getString( "description" ),
+                        rs2.getInt( "time" ),
+                        rs2.getFloat( "rating" )
                 );
                 routesList.add( tempRoute );
             }
+            System.out.println( routesList );
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -111,25 +115,37 @@ public class Locations {
 
     public String fetchRoutes(int userTimeLimit, int userMoney, String type, float myCoordD, float myCoordS, String sortby) {
         JSONObject arrayObject = new JSONObject();
+
+        JsonObject newTest = new JsonObject();
         String result;
         try {
+            JsonArray aTest = new JsonArray( );
+
             JSONArray arrayRes = new JSONArray();
             for (Route tempRoute : this.routesList) {
-                if (tempRoute.time < userTimeLimit) {
+                //if (tempRoute.getTime() < userTimeLimit) {
                     JSONObject routeResult = new JSONObject();
+
+                    JsonObject rTest = new JsonObject();
+                    rTest.addProperty( "id_route", tempRoute.getId_route() );
+                    rTest.addProperty( "id_route",  tempRoute.getTitle()  );
+
                     routeResult.put("id_route", tempRoute.getId_route());
                     routeResult.put("title", tempRoute.getTitle() );
                     routeResult.put("placesNumber", tempRoute.getPlacesnumber());
                     routeResult.put("time", tempRoute.getTime() );
                     routeResult.put("rating", tempRoute.getRating());
                     arrayRes.put(routeResult);
-                }
+                    aTest.add( rTest );
+                //}
             }
             arrayObject.put("RoutesList", arrayRes);
+
+            newTest.add( "Test Route", aTest );
         } catch (JSONException jse) {
             jse.printStackTrace();
         }
-        result = arrayObject.toString();
+        result = newTest.toString();
         return result;
     }
 }
