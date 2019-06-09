@@ -21,25 +21,73 @@
 
 ## Взаимодействие между приложением и сервером
 
-### Пример запроса
+### Запрос
+
+#### Параметры
+
+* **time** - Максимальная временная продолжительность маршрута.
+* **money** - Максимальный бюджет.
+* **type** - Тип маршрута.
+  * active - активный (парки, ).
+  * passive - пассивный (кино, театр).
+  * education - образовательный (музеи, ).
+* **mycoordD** - Текущее положение пользователя (долгота).
+* **mycoordS** - Текущее положение пользователя (широта).
+* **sortby** - Сортировка предлагаемых маргрутов.
+  * rating - Сортировка по рейтингу.
+  * time - Сортировка по продолжительности.
+  * prices - Сортировка по стоимости.
+* **page** - Страница поисковой выдачи.
+
+#### Пример
 
 ```url
-http://localhost:8080/server?sort_by=SORT_BY_POPULARITY&page=1
+http://localhost:8080/server/?time=60&money=1000&type=active&mycoordD=60.037&mycoordS=37.75&sortby=rating&page=1
 ```
 
-### Пример ответа
+### Ответ
+
+#### Параметры ответа
+
+* **title** - 
+* **placesNumber** - 
+* **description** - 
+* **time** - 
+* **rating** - 
+* **Array[] locations** - 
+  * **title** - 
+  * **coordD** - 
+  * **desctiption** - 
+  * **imgURL** - 
+  * **rating** - 
+  * **id_place** - 
+
+#### Пример ответа
 
 ```json
 {
-    "string": "foo",
-    "number": 5,
-    "array": [1, 2, 3],
-    "object": {
-        "property": "value" ,
-        "subobj": {
-            "arr": ["foo", "ha"],
-            "numero": 1
+    "title": "foo",
+    "placesNumber": 5,
+    "description": [1, 2, 3],
+    "time": [1, 2, 3],
+    "rating": [1, 2, 3],
+    "locations": [
+        {
+            "title": "dfdf",
+            "coordD": "dfdf",
+            "desctiption": "dfdf",
+            "imgURL": "dfdf",
+            "rating": "dfdf",
+            "id_place": "dfdf",
+        },
+        {
+            "title": "dfdf",
+            "coordD": "dfdf",
+            "desctiption": "dfdf",
+            "imgURL": "dfdf",
+            "rating": "dfdf",
+            "id_place": "dfdf",
         }
-    }
+    ]
 }
 ```
