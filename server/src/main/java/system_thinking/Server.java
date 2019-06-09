@@ -15,14 +15,13 @@ public class Server {
     @RequestMapping(value="/", method = RequestMethod.GET)
     @ResponseBody
     public String answer(
-                         @RequestParam(value = "time", required = false) String time,
-                         @RequestParam(value = "money", required = false) String money,
+                         @RequestParam(value = "time", required = false) String userTimeLimit,
+                         @RequestParam(value = "money", required = false) String userMoney,
                          @RequestParam(value = "type", required = false) String type,
                          @RequestParam(value = "myCoordD", required = false) String myCoordD,
                          @RequestParam(value = "myCoordS", required = false) String myCoordS,
-                         @RequestParam(value = "sortby", required = false) String sortby,
-                         @RequestParam(value = "page", required = false) String page
+                         @RequestParam(value = "sortby", required = false) String sortby
                          ) {
-        return db.fetchJson( Integer.valueOf(time), Integer.valueOf(money), type, Float.valueOf(myCoordD), Float.valueOf(myCoordS), sortby, Integer.valueOf(page));
+        return db.fetchRoutes( Integer.valueOf(userTimeLimit), Integer.valueOf(userMoney), type, Float.valueOf(myCoordD), Float.valueOf(myCoordS), sortby);
     }
 }

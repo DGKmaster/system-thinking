@@ -1,12 +1,12 @@
 package system_thinking;
 
 public class Location {
-    int geo_id;
-    String geoname;
-    Float lon;
-    Float lat;
+    int id_place;
+    String title;
+    Float coords;
+    Float coordd;
     String description;
-    String img;
+    String imgurl;
     Float rating;
     int route;
     Float money;
@@ -35,36 +35,36 @@ public class Location {
         this.rating = rating;
     }
 
-    public int getGeo_id() {
-        return geo_id;
+    public int getId_place() {
+        return id_place;
     }
 
-    public void setGeo_id(Integer geo_id) {
-        this.geo_id = geo_id;
+    public void setGeo_id(Integer id_place) {
+        this.id_place = id_place;
     }
 
     public String getGeoname() {
-        return geoname;
+        return title;
     }
 
     public void setGeoname(String geoname) {
-        this.geoname = geoname;
+        this.title = title;
     }
 
     public Float getLon() {
-        return lon;
+        return coords;
     }
 
     public void setLon(Float lon) {
-        this.lon = lon;
+        this.coords = coords;
     }
 
     public Float getLat() {
-        return lat;
+        return coordd;
     }
 
     public void setLat(Float lat) {
-        this.lat = lat;
+        this.coordd = coordd;
     }
 
     public String getDescription() {
@@ -76,20 +76,20 @@ public class Location {
     }
 
     public String getImg() {
-        return img;
+        return imgurl;
     }
 
     public void setImg(String img) {
-        this.img = img;
+        this.imgurl = img;
     }
 
     public Location(int geo_id, String geoname, Float lon, Float lat, String description, String img, Float rating, int route, Float money) {
-        this.geo_id = geo_id;
-        this.geoname = geoname;
-        this.lon = lon;
-        this.lat = lat;
+        this.id_place = geo_id;
+        this.title = geoname;
+        this.coords = lon;
+        this.coordd = lat;
         this.description = description;
-        this.img = img;
+        this.imgurl = img;
         this.rating = rating;
         this.route = route;
         this.money = money;
