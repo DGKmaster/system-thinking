@@ -8,6 +8,24 @@ public class Location {
     String description;
     String img;
     Float rating;
+    int route;
+    Float money;
+
+    public Float getMoney() {
+        return money;
+    }
+
+    public void setMoney(Float money) {
+        this.money = money;
+    }
+
+    public int getRoute() {
+        return route;
+    }
+
+    public void setRoute(int route) {
+        this.route = route;
+    }
 
     public Float getRating() {
         return rating;
@@ -65,7 +83,7 @@ public class Location {
         this.img = img;
     }
 
-    public Location(int geo_id, String geoname, Float lon, Float lat, String description, String img, Float rating) {
+    public Location(int geo_id, String geoname, Float lon, Float lat, String description, String img, Float rating, int route, Float money) {
         this.geo_id = geo_id;
         this.geoname = geoname;
         this.lon = lon;
@@ -73,5 +91,7 @@ public class Location {
         this.description = description;
         this.img = img;
         this.rating = rating;
+        this.route = route;
+        this.money = money;
     }
 }
