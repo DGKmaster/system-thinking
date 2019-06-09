@@ -67,27 +67,29 @@ http://localhost:8080/server/?time=60&money=1000&type=active&mycoordD=60.037&myc
 
 ```json
 {
-    "title": "foo",
-    "placesNumber": 5,
-    "description": [1, 2, 3],
-    "time": [1, 2, 3],
-    "rating": [1, 2, 3],
+    "title": "Достоевский",
+    "placesNumber": 2,
+    "description": "Хороший маршрут.",
+    "time": 120,
+    "rating": 4.7,
     "locations": [
         {
-            "title": "dfdf",
-            "coordD": "dfdf",
-            "desctiption": "dfdf",
-            "imgURL": "dfdf",
-            "rating": "dfdf",
-            "id_place": "dfdf",
+            "title": "Исакеевиский собор",
+            "coordD": 78.3,
+            "coordS": 12.4,
+            "desctiption": "Историческое место.",
+            "imgURL": "https://server.com/img/1.png",
+            "rating": 5.0,
+            "id_place": 123,
         },
         {
-            "title": "dfdf",
-            "coordD": "dfdf",
-            "desctiption": "dfdf",
-            "imgURL": "dfdf",
-            "rating": "dfdf",
-            "id_place": "dfdf",
+            "title": "Кокушкин мост",
+            "coordD": 4.5,
+            "coordS": 12.4,
+            "desctiption": "Надо посетить.",
+            "imgURL": "https://server.com/img/2.png",
+            "rating": 3.2,
+            "id_place": 453,
         }
     ]
 }
